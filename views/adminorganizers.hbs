@@ -1,0 +1,60 @@
+{{> navHeader}}
+
+<h1>Organizers for event with ID {{event}}</h1>
+<p id="errors" class="errors-p"></p>
+<table id="documents" class="table-fill">
+    <thead>
+        <tr>
+        <th class="text-left">Organizer name</th>
+        <th class="text-left">Enrolled</th>
+        </tr>
+    </thead>
+    <tbody class="table-hover">
+    {{#each org}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td><a href="/"><button class="button" type="submit">Cancel</button></a></td>
+            </tr>
+    {{/each}}
+    </tbody>
+</table>
+
+<h1>Tasks</h1>
+<p id="errors" class="errors-p"></p>
+<table id="documents" class="table-fill">
+    <thead>
+        <tr>
+        <th class="text-left">Task description</th>
+        <th class="text-left">Number of Organizers</th>
+        <th class="text-left">Due</th>
+        </tr>
+    </thead>
+    <tbody class="table-hover">
+    {{#each task}}
+            <tr>
+                <td>{{this.description}}</td>
+                <td>{{this.freePlaces}}</td>
+                <td>{{this.due}}</td>
+            </tr>
+    {{/each}}
+    </tbody>
+</table>
+
+<div class="container">
+    <form class="myform" action="/insertdescription?eventid={{eventid}}" method="POST">
+        {{#if errors}}
+        <h1>{{errors}}</h1>
+        {{/if}}
+        <label class="labels" for="task-desc">Task description: </label><br>
+        <input class="inputs" type="textarea" id="task-desc" name="taskdesc"><br>
+
+        <label class="labels" for="due-date">Due: </label><br>
+        <input class="inputs" type="date" id="due-date" name="duedate"><br>
+
+        <label class="labels" for="free-places">Free places: </label><br>
+        <input type="number" name="freeplaces" id="free-places" min="1" ma x="10"><br>
+
+        <button class="button" type="submit">Submit</button>
+        <p id="validity"></p>
+    </form>
+</div>

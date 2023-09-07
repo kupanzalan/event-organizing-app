@@ -1,0 +1,14 @@
+<div class="page">
+  <nav class="page__menu menu">
+    <ul class="menu__list r-list">
+      <li class="menu__group"><a href="/" class="menu__link r-link text-underlined">Home</a></li>
+      <li class="menu__group"><a href="/myevents" class="menu__link r-link text-underlined">My events</a></li>
+      {{#if admin}}
+        <li class="menu__group"><a href="/events" class="menu__link r-link text-underlined">Add event</a></li>
+        <li class="menu__group"><a href="/adminevents" class="menu__link r-link text-underlined">Events added by me</a></li>
+      {{/if}}
+      
+      <li class="menu__group"><a href="/signout" id="logged-in-user" class="menu__link r-link text-underlined">Log out, {{username}}</a></li>
+    </ul>
+  </nav>
+</div>

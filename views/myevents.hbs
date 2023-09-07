@@ -1,0 +1,24 @@
+{{> navHeader}}
+
+<h1>List of my events</h1>
+<p id="errors" class="errors-p"></p>
+<table id="documents" class="table-fill">
+    <thead>
+        <tr>
+        <th class="text-left">Event name</th>
+        <th class="text-left">Start date</th>
+        <th class="text-left">End date</th>
+        <th class="text-left">Location</th>
+        </tr>
+    </thead>
+    <tbody class="table-hover">
+    {{#each event}}
+            <tr>
+                <td><a href='/getdetails?id={{this._id}}' tabindex="-1">{{this.name}}</a></td>
+                <td><a href='/getdetails?id={{this._id}}' tabindex="-1">{{this.startdate}}</a></td>
+                <td><a href='/getdetails?id={{this._id}}' tabindex="-1">{{this.enddate}}</a></td>
+                <td><a href='/getdetails?id={{this._id}}' tabindex="-1">{{this.location}}</a></td>
+            </tr>
+    {{/each}}
+    </tbody>
+</table>

@@ -1,0 +1,108 @@
+body {
+    background-color: rgb(201, 76, 76);
+    color: rgb(32, 32, 32);
+}
+
+h1, h3 {
+    background-color: yellow;
+    color: blue;
+    font-family: Arial, Helvetica, Arial, sans-serif;
+}
+
+.general {
+    font-family: Arial, Helvetica, Arial, sans-serif;
+}
+
+.desc {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-style: dashed;
+    opacity: 0.5;
+    padding-top: 30px;
+    padding-left: 50px;
+    transition: opacity 2s;
+}
+
+.desc:hover {
+    opacity: 1;
+}
+
+em, h2 {
+    color: rgb(17, 76, 127);
+    font-style: italic;
+    font-weight: bold;
+}
+
+div > ul > li {
+    color: rgb(17, 76, 127);
+    font-style: italic;
+}
+
+
+a.golden:link {
+    color: rgb(72, 220, 127);
+}
+
+a.golden:hover {
+    color:rgb(199, 202, 246);
+}
+
+a.golden:visited {
+    color: rgb(72, 97, 211);
+}
+
+a.golden:active {
+    color: rgb(212, 97, 211);
+    font-weight: bold;
+}
+
+
+
+a.border:link {
+    color: rgb(203, 76, 127);
+}
+
+a.border:hover {
+    color:rgb(251, 52, 235);
+}
+
+a.border:visited {
+    color:rgb(203, 220, 127);
+}
+
+a.border:active {
+    color: rgb(160, 202, 59);
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #999;
+    padding: 0.5rem;
+}
+
+tr:nth-child(odd) > th:nth-child(odd){
+    background-color: rgb(17, 76, 127);
+}
+
+tr:nth-child(even) > th:nth-child(even){
+    background-color: rgb(17, 76, 127);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(17, 76, 127);
+}
+
+.image {
+    flex-basis: 40%
+}
+
+.text {
+    font-size: 20px;
+    padding-left: 20px;
+}

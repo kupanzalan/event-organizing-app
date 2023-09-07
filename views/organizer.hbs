@@ -1,0 +1,21 @@
+<h1>Register to event</h1>
+<form class="myform" method="POST">
+    {{#if error}}
+    <h1>{{error}}</h1>
+    {{/if}}
+    <label class="labels" for="organizer-name">Name: </label><br>
+    <input class="inputs" type="text" id="organizer-name" pattern="^[A-Z][a-z]+$" name="organizername"><br>
+
+    <label class="labels" for="event-id">Event ID: </label><br>
+    <select class="inputs" name="eventid" id="event-id">
+        {{#each event}}
+            <option value={{this._id}}>{{this.name}}</option>
+        {{/each}}
+    </select><br>
+    
+    <button class="button" type="submit" formaction="/register">Submit</button>
+    <button class="button" type="submit" formaction="/cancel" id="cancel-button">Cancel</button>
+</form>
+{{#if success}}
+<h1>{{success}}</h1>
+{{/if}}

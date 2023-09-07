@@ -1,0 +1,97 @@
+{{> navHeader}}
+<h1>Details</h1>
+
+<table class="table-fill">
+    <thead>
+        <tr>
+        <th class="text-left">Event name</th>
+        <th class="text-left">Start date</th>
+        <th class="text-left">End date</th>
+        <th class="text-left">Location</th>
+        </tr>
+    </thead>
+    <tbody class="table-hover">
+    {{#if event}}
+        {{#each event}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.startdate}}</td>
+                <td>{{this.enddate}}</td>
+                <td>{{this.location}}</td>
+            </tr>
+        {{/each}}
+    {{else}}
+        <tr>
+            <td>No events</td>
+        </tr>
+    {{/if}}
+    </tbody>
+</table>
+
+<table class="table-fill">
+    <thead>
+        <tr>
+        <th class="text-left">Organizers</th>
+        </tr>
+    </thead>
+    <tbody class="table-hover">
+    {{#if org}}
+        {{#each org}}
+            <tr>
+                <td>{{this.name}}</td>
+            </tr>
+        {{/each}}
+    {{else}}
+        <tr>
+            <td>No organizers at this event</td>
+        </tr>
+    {{/if}}
+    </tbody>
+</table>
+
+<h1>Tasks</h1>
+<p id="errors" class="errors-p"></p>
+<table id="documents" class="table-fill">
+    <thead>
+        <tr>
+        <th class="text-left">Task description</th>
+        <th class="text-left">Number of Organizers</th>
+        <th class="text-left">Due</th>
+        <th class="text-left">Do this task</th>
+        </tr>
+    </thead>
+    <tbody class="table-hover">
+    {{#each task}}
+            <tr>
+                <td>{{this.description}}</td>
+                <td>{{this.freePlaces}}</td>
+                <td>{{this.due}}</td>
+                <td><a href="/dotask?taskid={{this._id}}&eventid={{eventid}}"><button class="button" type="submit">Submit</button></a></td>
+            </tr>
+    {{/each}}
+    </tbody>
+</table>
+
+<div>
+    {{#each image}}
+        <img class="imageCenter" src="../public/uploads/{{this.filename}}" alt="">
+    {{/each}}
+</div>
+
+{{#if error}}
+    <h1>{{error}}</h1>
+{{/if}}
+
+<h1>Upload photos</h1>
+<form class="myform" action="/upload" method="POST" enctype="multipart/form-data">
+    {{#if errors}}
+    <h1>{{errors}}</h1>
+    {{/if}}
+
+    <input type="hidden" name="eventid" value={{eventid}}>
+
+    <label class="labels" for="file_upload">Your file: </label><br>
+    <input class="inputs" name="myfile" id="file_upload" type="file"><br>
+
+    <button class="button" type="submit">Submit</button>
+</form>

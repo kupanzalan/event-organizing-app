@@ -1,0 +1,130 @@
+body {
+    background-color: rgb(42, 50, 51);
+    color: rgb(32, 32, 32);
+    overflow: scroll;
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(22, 19, 19);
+    color: white;
+    text-align: center;
+    font-family: Noto Sans, sans-serif;
+}
+
+form {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* width: 900px; */
+    text-align: center;
+    font-family: Noto Sans, sans-serif;
+    background-color: rgb(92, 105, 110);
+    padding: 20px;
+}
+
+.labels {
+    line-height: 30px;
+    font-size: large;
+    font-family: Noto Sans, sans-serif;
+}
+
+.text-label {
+    line-height: 30px;
+    font-size: large;
+    font-family: Noto Sans, sans-serif;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+.inputs {
+    width: 28%;
+    height: 24px;
+}
+
+.button {
+    background-color: rgb(75, 141, 127);
+    color: white;
+    margin-top: 25px;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+    opacity: 0.9;
+}
+
+.button:hover {
+    opacity: 1;
+}
+
+.button2 {
+    background-color: rgb(75, 141, 127);
+    color: white;
+    margin-top: 25px;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+    opacity: 0.9;
+    display: inline-block;
+}
+
+.button2:hover {
+    opacity: 1;
+}
+
+.button-div {
+    text-align: center;
+}
+
+#textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+}
+
+.select-div {
+    position: relative;
+}
+
+select {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    width: 200px;
+    height: 30px;
+}
+
+#scroll-area {
+    height:40px;
+    width:400px;
+    border:solid 2px rgb(31, 69, 78);
+    margin-top: 20px;
+    margin-left: 450px;
+    margin-right: 450px;
+    padding-left: 5px;
+    padding-right: 5px;
+    /* overflow-x: auto; */
+    white-space: nowrap;
+    overflow:auto;
+    /* overflow-x: scroll;
+    overflow-y: hidden; */
+}
+
+#scroll-text {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#the-password {
+    font-size: 10px;
+}

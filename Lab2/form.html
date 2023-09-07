@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My form</title>
+        <link rel="stylesheet" href="formstyle.css">
+    </head> 
+    <body>
+        <form>
+            <label class="labels" for="fname">First name: </label><br>
+            <input class="inputs" type="text" id="fname" pattern="^[A-Z][a-z]+$"><br>
+
+            <label class="labels" for="lname">Last name: </label><br>
+            <input class="inputs" type="text" id="lname" pattern="^[A-Z][a-z]+$"><br>
+
+            <label class="labels" for="bdate">Date of birth: </label><br>
+            <input class="inputs" type="date" id="bdate"><br>
+
+            <label class="labels" for="email-addr">E-mail address: </label><br>
+            <input class="inputs" type="email" id="email-addr"><br>
+
+            <label class="labels" for="fav-website">Favourite website: </label><br>
+            <input class="inputs" type="text" id="fav-website"><br>
+
+            <label class="labels" for="password">Password: </label><br>
+            <input class="inputs" type="password" id="password"><br>
+            <p id="the-password"></p>
+
+            <input class="button" type="button" id="sbutton" value="Submit" hidden="hidden">
+            <p id="validity"></p>
+        </form>
+
+        <footer class="footer">
+            <p>            
+                <script>
+                    let date = document.lastModified;
+                    document.write(`Last modified: ${date}`);
+            </script></p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+{{> navHeader}}
+
+<h1>List of events</h1>
+<p id="errors" class="errors-p"></p>
+<table id="documents" class="table-fill">
+    <thead>
+        <tr>
+        <th class="text-left">Event name</th>
+        <th class="text-left">Start date</th>
+        <th class="text-left">End date</th>
+        <th class="text-left">Location</th>
+        {{!-- <th class="text-left">Enroll as organizer</th> --}}
+        </tr>
+    </thead>
+    <tbody class="table-hover">
+    {{#each event}}
+            <tr class="list">
+                <td>{{this.name}}</td>
+                <td>{{this.startdate}}</td>
+                <td>{{this.enddate}}</td>
+                <td>{{this.location}}</td>
+                {{!-- <td><a href="/join?name={{this.name}}"><button id="button-{{this.name}}" class="myButtonClass2">Join</button></a></td> --}}
+            </tr>
+            <tr style="display: none; list-style: none;" id="row-{{this.name}}"></tr>
+    {{/each}}
+    </tbody>
+</table>

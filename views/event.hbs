@@ -1,0 +1,24 @@
+{{> navHeader}}
+
+<h1>Fill out event form</h1>
+<div class="container">
+    <form class="myform" action="/create" method="POST">
+        {{#if errors}}
+        <h1>{{errors}}</h1>
+        {{/if}}
+        <label class="labels" for="event-name">Event name: </label><br>
+        <input class="inputs" type="text" id="event-name" pattern="^[A-Z][a-z]+$" name="eventname"><br>
+
+        <label class="labels" for="start-date">Date of start: </label><br>
+        <input class="inputs" type="date" id="start-date" name="startdate"><br>
+
+        <label class="labels" for="end-date">Date of end: </label><br>
+        <input class="inputs" type="date" id="end-date" name="enddate"><br>
+
+        <label class="labels" for="event-location">Location: </label><br>
+        <input class="inputs" type="text" id="event-location" name="location"><br>
+
+        <button class="button" type="submit" >Submit</button>
+        <p id="validity"></p>
+    </form>
+</div>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Doggos</title>
+        <link rel="stylesheet" href="style.css">
+    </head> 
+    <!-- html törzsének a háttérszíne illetve a szöveg színe -->
+<body>
+    <!-- Elemre vonatkozó szelektorok a főcím (h1) és alcím (h3) színe, háttérszíne, betűtípus-családja -->
+    <h1>Doggos</h1>
+    <article>
+        <!--  stílusosztályt az em és h2 elemekre. -->
+        <h2>Golden Retriever</h2>
+        <section>
+            <h3>General</h3>
+            <!--  két különböző stílusú paragrafus -->
+            <p class="general">The Golden Retriever is a medium-large gun dog that was bred to retrieve shot waterfowl, such as ducks and upland game birds, during hunting and
+                 shooting parties. The name "retriever" refers to the breed's ability to retrieve shot game undamaged due to their soft mouth. Golden retrievers 
+                 have an instinctive love of water, and are easy to train to basic or advanced obedience standards. They are a long-coated breed, with a dense inner
+                  coat that provides them with adequate warmth in the outdoors, and an outer coat that lies flat against their bodies and repels water. 
+                  Golden retrievers are well suited to residency in suburban or country environments. They shed copiously, particularly at the change of
+                   seasons, and require fairly regular grooming. The Golden Retriever was originally bred in Scotland in the mid-19th century.</p>
+            </section>
+            
+            <section>
+            <h3>Characteristics</h3>
+            <!--  két különböző stílusú paragrafus -->
+            <!-- paragrafus stílus, mely be van keretezve szaggatott vonallal és félig átlátszó -->
+            <!-- CSS3 átmenetek (transition) használata, a bekeretezett paragrafus 2 másodperc alatt váljon teljesen láthatóvá ha fölé visszük az egeret -->
+            <p class="desc">The Golden Retriever is a medium-large, strongly built breed with a dense, water-repellant wavy coat. As a dog with origins in pedigree breeding, 
+                and owing to its widespread historical popularity, some regional variations have emerged in the breed; therefore, the three subtypes of the 
+                Golden Retriever reflect the typical variations in dimensions and coat. However, all Golden Retrievers are blonde, yellow, or gold in colour, 
+                and all subtypes are susceptible to the same health problems.</p>
+            </section>
+
+            <a href="golderretriever.html"><img src="golden-retriever.jpg" alt="Golden retriever" width=900 height=670></a>
+            <!-- kontextussal megadott szelektor -->
+            <!-- egy div elemben elhelyezkedő ul elemen belüli li elem stílusa -->
+            <div>
+                <p>Different breeds by countries:</p>
+                <ul>
+                    <li>British</li>
+                    <li>American</li>
+                    <li>Canadian</li>
+                </ul>
+            </div>
+
+            <!-- link tipus 1 -->
+            <nav>
+                <!-- két különböző hivatkozás (link) típus -->
+                <a class="golden" href="https://en.wikipedia.org/wiki/Golden_Retriever">More information</a>
+                <p><a href="#footer">Jump To Bottom</a></p>
+            </nav>
+        </article>
+        
+        <article>
+        <h2>Border Collie</h2>
+        <section>
+            <h3>General</h3>
+            <p class="general">The Border Collie is a working and herding dog breed developed in the Anglo-Scottish border region, for herding livestock, especially sheep.
+                Considered highly intelligent, extremely energetic, acrobatic and athletic, they frequently compete with great success in sheepdog trials and dog sports. 
+                They are often cited as the most intelligent of all domestic dogs. Border Collies continue to be employed in their traditional work of herding 
+                livestock throughout the world and are kept as pets.</p>
+            </section>
+            
+            <section>
+            <h3>Description</h3>
+            <!-- stílusosztályt az em és h2 elemekre. -->
+            <!-- paragrafus stílus, mely be van keretezve szaggatott vonallal és félig átlátszó -->
+            <!-- CSS3 átmenetek (transition) használata, a bekeretezett paragrafus 2 másodperc alatt váljon teljesen láthatóvá ha fölé visszük az egeret -->
+            <p class="desc"><em>In general</em>, Border Collies are medium-sized dogs with a moderate amount of coat, which is more often thick and prone to shedding. They have a double coat
+                 that varies from smooth to rough and is occasionally curled. While black and white is the most commonly seen color pattern of the Border Collie, 
+                 the breed appears in just about any color and pattern known to occur in dogs. Some of these include black tricolor (black/tan/white), liver and white, 
+                 and red tricolor (red/tan/white) which have also been seen regularly, and other colours such as blue, lilac, red merle, blue merle, brindle, and Australian 
+                 red (also known as ee red, blonde, recessive red, or gold) which is seen less frequently. Some border collies may also have single-color coats.</p>
+            </section>
+
+            <!-- egymás mellé kerüljön több kép-szöveg páros -->
+            <div class="container">
+                <div class="image">
+                    <img src="border-collie.jpg" alt="Border collie">
+                </div>
+                <div class="text">
+                    <p>Border Collies require considerably more daily physical exercise and mental stimulation than many other breeds. The border collie is widely 
+                        considered to be the most intelligent dog breed. The border collie ranks 1st in Stanley Coren's The Intelligence of Dogs, being part of 
+                        the top 10 brightest dogs. Although the primary role of the border collie is to herd livestock, the breed is becoming increasingly popular as a 
+                        companion animal.</p>
+                </div>
+            </div>
+
+            <div>
+                <p>Registries:</p>
+                <ol>
+                    <li>United Kingdom</li>
+                    <li>United States</li>
+                    <li>Australia</li>
+                    <li>Canada</li>
+                    <li>South Africa</li>
+                    <li>Turkey</li>
+                </ol>
+            </div>
+
+            <!-- link tipus 2 -->
+            <nav>
+                <!-- két különböző hivatkozás (link) típus -->
+                <a class="border" href="bordercollie.html">More information</a>
+                <p><a href="#footer">Jump To Bottom</a></p>
+            </nav>
+        </article>
+        
+        <article>
+        <h2>German shepherd</h2>
+        <section>
+            <h3>General</h3>
+            <p class="general">The German Shepherd (German: Deutscher Schäferhund, German pronunciation: [ˈdɔʏtʃɐ ˈʃɛːfɐˌhʊnt]) is a breed of medium to large-sized working dog
+                 that originated in Germany. According to the FCI, the breed's English language name is German Shepherd Dog. The breed was officially
+                  known as the "Alsatian Wolf Dog" in the UK from after the First World War until 1977 when its name was changed back to German Shepherd.
+                   Despite its wolf-like appearance, the German Shepherd is a relatively modern breed of dog, with their origin dating to 1899.</p>
+            </section>
+            
+            <section>
+            <h3>Description</h3>
+            <!-- paragrafus stílus, mely be van keretezve szaggatott vonallal és félig átlátszó -->
+            <!-- CSS3 átmenetek (transition) használata, a bekeretezett paragrafus 2 másodperc alatt váljon teljesen láthatóvá ha fölé visszük az egeret -->
+            <p class="desc">German Shepherds are medium to large-sized dogs. The breed standard height at the withers is 60–65 cm (24–26 in) for males, 
+                and 55–60 cm (22–24 in) for females. German Shepherds are longer than they are tall, with an ideal proportion of 10 to ​8 1⁄2. 
+                The AKC official breed standard does not set a standard weight range. They have a domed forehead, a long square-cut muzzle with strong 
+                jaws and a black nose. The eyes are medium-sized and brown. The ears are large and stand erect, open at the front and parallel, but 
+                they often are pulled back during movement. A German Shepherd has a long neck, which is raised when excited and lowered when moving at 
+                a fast pace as well as stalking. The tail is bushy and reaches to the hock.</p>
+            </section>
+
+            <!-- egymás mellé kerüljön több kép-szöveg páros -->
+            <div class="container">
+                <div>
+                    <img class="image" src="german-shepherd.jpg" alt="German sherpherd">
+                </div>
+
+                <div class="text">
+                    <p>German Shepherds are moderately active dogs and are described in breed standards as self assured. The breed is marked by a willingness 
+                    to learn and an eagerness to have a purpose. They are curious, which makes them excellent guard dogs and suitable for search missions. 
+                    They can become overprotective of their family and territory, especially if not socialized correctly. They are not inclined to become 
+                    immediate friends with strangers. German Shepherds are highly intelligent and obedient, as well as protective of their owners.</p>
+                </div>
+            </div>
+
+            <div>
+                <!-- táblázat esetén két különböző cella-stílus -->
+                <table>
+                    <tr>
+                        <th>Gender</th>
+                        <th>Height</th>
+                        <th>Weight</th>
+                        <th>Life expectancy</th>
+                    </tr>
+                    <tr>
+                        <th>Female</th>
+                        <th>22-24 inches</th>
+                        <th>50-70 pounds</th>
+                        <th>12-14 years</th>
+                    </tr>
+                    <tr>
+                        <th>Male</th>
+                        <th>24-26 inches</th>
+                        <th>65-90 pounds</th>
+                        <th>12-14 years</th>
+                    </tr>
+                </table>
+            </div>
+
+            <nav>
+                <a href="germanshepherd.html">More information</a>
+            </nav>
+        </article>
+
+        <footer id="footer">
+            <p>Author: Kupan Zalan</p>
+            <p>Student id: kzim1740</p>
+          </footer>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<form class="myform" action="/registeruser" method="POST">
+    {{#if errors}}
+    <h1>{{errors}}</h1>
+    {{/if}}
+    <h1><i class="fas fa-user-plus"></i> Register</h1>
+    <label class="labels" for="username">Username: </label><br>
+    <input class="inputs" type="text" id="username" name="username" placeholder="Username"><br>
+
+    <label class="labels" for="useremail">E-mail: </label><br>
+    <input class="inputs" type="email" id="useremail" name="useremail" placeholder="E-mail"><br>
+
+    <label class="labels" for="userpassword">Password: </label><br>
+    <input class="inputs" type="password" id="userpassword" name="userpassword" placeholder="Password"><br>
+
+    <label class="labels" for="userpassword-cnf">Cofirm password: </label><br>
+    <input class="inputs" type="password" id="userpassword-cnf" name="userpasswordcnf" placeholder="Password"><br>
+
+    <label class="labels" for="role">Role: </label><br>
+    <select class="inputs" name="role" id="userrole">
+        <option value="admin">Admin</option>
+        <option value="organizer">Organizer</option>
+    </select><br>
+
+    <button class="button" type="submit">Register</button>
+    <p class="labels">Have an account?<a class="labels" href="/login"> Log in!</a></p>
+</form>
